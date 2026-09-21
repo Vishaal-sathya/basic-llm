@@ -1,0 +1,10 @@
+### Layer Norm 
+Training deep neural networks with many layers can sometimes prove challenging
+due to problems like vanishing or exploding gradients. These problems lead to unstable training dynamics and make it difficult for the network to effectively adjust its
+weights, which means the learning process struggles to find a set of parameters
+(weights) for the neural network that minimizes the loss function
+
+The main idea behind layer normalization is to adjust the activations (outputs) of a neural network layer to have a mean of 0 and a variance of 1, also
+known as unit variance. This adjustment speeds up the convergence to effective
+weights and ensures consistent, reliable training
+![layer norm](image.png)
