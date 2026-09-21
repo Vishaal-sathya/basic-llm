@@ -8,3 +8,4 @@ The main idea behind layer normalization is to adjust the activations (outputs) 
 known as unit variance. This adjustment speeds up the convergence to effective
 weights and ensures consistent, reliable training
 ![layer norm](image.png)
+
