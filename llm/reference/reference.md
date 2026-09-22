@@ -7,5 +7,18 @@ weights, which means the learning process struggles to find a set of parameters
 The main idea behind layer normalization is to adjust the activations (outputs) of a neural network layer to have a mean of 0 and a variance of 1, also
 known as unit variance. This adjustment speeds up the convergence to effective
 weights and ensures consistent, reliable training
+
 ![layer norm](image.png)
 
+### Self Attention
+
+In self-attention, our goal is to calculate context vectors z(i) for each element x(i)
+in the input sequence. A context vector can be interpreted as an enriched embedding
+vector.
+
+![self attention](image-1.png)
+![attn weights](image-2.png)
+![context vec](image-3.png)
+
+### attention with weights
+![attn weights](image-4.png)
