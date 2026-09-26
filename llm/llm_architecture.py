@@ -1,9 +1,9 @@
 # pg 141
 import torch 
 import torch.nn as nn
-from gelu import GELU
-from transformer_block import TransformerBlock
-from layer_norm import LayerNorm
+from llm.gelu import GELU
+from llm.transformer_block import TransformerBlock
+from llm.layer_norm import LayerNorm
 
 class LLMModel(nn.Module):
     def __init__(self, cfg):

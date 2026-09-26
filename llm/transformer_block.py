@@ -1,9 +1,9 @@
 # pg 137
 import torch
 import torch.nn as nn
-from multihead_attn import MultiHeadAttention
-from feed_forward import FeedForward
-from layer_norm import LayerNorm
+from llm.multihead_attn import MultiHeadAttention
+from llm.feed_forward import FeedForward
+from llm.layer_norm import LayerNorm
 
 class TransformerBlock(nn.Module):
     def __init__(self, cfg):
@@ -13,7 +13,7 @@ class TransformerBlock(nn.Module):
             d_out=cfg['emb_dim'],
             context_length=cfg['context_length'],
             num_heads=cfg['n_heads'],
-            dropout=cfg['dropout'],
+            dropout=cfg.get('drop_rate', cfg.get('dropout', 0.1)),
             qkv_bias=cfg['qkv_bias']
         )
         self.ff = FeedForward(cfg)
